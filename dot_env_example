@@ -1,0 +1,7 @@
+# Ticket: Connection
+# Rename this file to .env after filling in your MFLIX_DB_URI and your SECRET_KEY
+# Do not surround the URI with quotes
+SECRET_KEY=
+MFLIX_DB_URI=mongodb+srv:
+MFLIX_NS=sample_m
+PORT=5001
