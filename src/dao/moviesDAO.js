@@ -191,10 +191,12 @@ export default class MoviesDAO {
     The queryPipeline is a Javascript array, so you can use push() or concat()
     to complete this task, but you might have to do something about `const`.
     */
-
     const queryPipeline = [
       matchStage,
       sortStage,
+      skipStage,
+      limitStage,
+      facetStage,
       // TODO Ticket: Faceted Search
       // Add the stages to queryPipeline in the correct order.
     ]
