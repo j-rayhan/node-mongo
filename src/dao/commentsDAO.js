@@ -123,7 +123,19 @@ export default class CommentsDAO {
       // Return the 20 users who have commented the most on MFlix.
       const pipeline = [
         {
-          $sort: {},
+          $group: {
+            _id: "$email",
+            count: {
+              $sum: 1,
+            },
+          },
+        },
+        {
+          $sort: {
+            count: -1,
+          },
+        },
+        {
           $limit: 20,
         },
       ]
