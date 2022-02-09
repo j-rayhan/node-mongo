@@ -136,6 +136,7 @@ export default class MoviesController {
 
   static async getConfig(req, res, next) {
     const { poolSize, wtimeout, authInfo } = await MoviesDAO.getConfiguration()
+    console.log("PRINT IN %s=====>", "1 START ***", authInfo)
     try {
       let response = {
         pool_size: poolSize,

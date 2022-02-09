@@ -28,6 +28,7 @@ export default class MoviesDAO {
   static async getConfiguration() {
     const roleInfo = await mflix.command({ connectionStatus: 1 })
     const authInfo = roleInfo.authInfo.authenticatedUserRoles[0]
+    console.log("PRINT IN %s=====>", "MoviesDAO START ***", authInfo)
     const {
       poolSize,
       writeConcern: { wtimeout },
